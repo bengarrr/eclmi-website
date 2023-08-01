@@ -8,7 +8,7 @@
 </script>
 
 <div class="flex flex-row {_position} absolute text-zinc-100">
-    <div class="flex flex-col w-[770px]">
+    <div class="flex flex-col w-[770px] 2xl:w-[850px]">
         <div class="tag-text text-7xl [-webkit-text-stroke-width:3px]">
             {tag}
         </div>

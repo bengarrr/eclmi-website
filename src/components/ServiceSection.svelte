@@ -31,30 +31,30 @@
             </div>
         </div>
         <div class="basis-1/2">
-            <div>
+            <div class="2xl:w-[902px] w-[700px] h-auto ml-auto">
                 {#if blok.lead_image}
-                    <img src={blok.lead_image.filename} width=902 height=580 alt={`${blok.title} - heading image`}/>
+                    <img class="w-full h-full object-cover" src={blok.lead_image.filename} width=902 height=580 alt={`${blok.title} - heading image`}/>
                 {/if}
             </div>
         </div>
     </div>
 </div>
-<div class="image-carousel relative">
-    <div class="image-carousel--images flex flex-row">
+<div class="image-carousel relative overflow-hidden w-[100vw]">
+    <div class="image-carousel--images flex flex-row pl-[40px] py-[40px] gap-8">
         {#if blok.gallery.length>0 }
         {#each blok.gallery as image, i}
-            <div class="rounded-[20px]">
-                <img src={image.filename} width=510 height=408 alt={`${blok.title} - gallery image - ${i}`}/>
+            <div class="rounded-[20px] overflow-hidden basis-[547px] shrink-0 h-auto">
+                <img class="object-cover w-full h-full" src={image.filename} alt={`${blok.title} - gallery image - ${i}`}/>
             </div>
         {/each}
         {/if}
     </div>
-    <div class="carousel-controls absolute bottom-[50%] [transform:translate(0,50%)]">
-        <div class="left-arrow">
-            <img src="/assets/carousel/carousel-arrow-left.svg" alt="left arrow" />
+    <div class="carousel-controls absolute bottom-[50%] [transform:translate(0,50%)] flex flex-row items-center w-[100vw] px-[55px]">
+        <div class="left-arrow w-[80px] h-[80px] hover:cursor-pointer">
+            <img src="/assets/arrow-left.svg" alt="left arrow" />
         </div>
-        <div class="right-arrow">
-            <img src="/assets/carousel-arrow-right.svg" alt="right arrow" />
+        <div class="right-arrow ml-auto w-[80px] h-[80px] hover:cursor-pointer">
+            <img src="/assets/arrow-right.svg" alt="right arrow" />
         </div>
     </div>
 </div>
