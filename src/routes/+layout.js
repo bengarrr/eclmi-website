@@ -15,6 +15,8 @@ import ContactInformation from "../components/ContactInformation.svelte";
 
 import { apiPlugin, storyblokInit, useStoryblokApi } from "@storyblok/svelte";
 
+export const prerender = true;
+
 export async function load() {
     storyblokInit({
         accessToken: "y0b3rDuby0qmtM5HCCuuagtt",

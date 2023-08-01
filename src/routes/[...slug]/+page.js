@@ -1,5 +1,3 @@
-export const prerender = false;
-
 export async function load({ params, parent }) {
     const { storyblokApi } = await parent();
 
