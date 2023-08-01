@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html * {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.button-primary {
+    @apply w-[200px] h-[75px] bg-[#0d743b] rounded-[10px] flex flex-row items-center justify-between px-[18px] text-zinc-100;
+}
+
+.button-primary>img {
+    @apply w-[25px] h-auto;
+}
+
+.button-secondary {
+    @apply w-[200px] h-[75px] border-[4px] border-[#0d743b] rounded-[10px] flex flex-row items-center justify-center;
+}
