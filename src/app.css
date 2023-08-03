@@ -17,3 +17,11 @@ html * {
 .button-secondary {
     @apply w-[200px] h-[75px] border-[4px] border-[#0d743b] rounded-[10px] flex flex-row items-center justify-center;
 }
+
+.paragraph > p:empty {
+    @apply pt-6;
+}
+
+.paragraph a {
+    @apply text-blue-500 underline hover:text-blue-800
+}
