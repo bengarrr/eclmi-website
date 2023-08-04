@@ -7,8 +7,14 @@
     let modal;
     let modal_image;
     let service_dropdown;
+    let carousel;
 
     let carousel_index = 0;
+
+    let breakpoint = "(max-width: 768px)";
+
+    const carousel_tranform_amount = 547;
+    const carousel_tranform_amount_mobile = 250;
 
     function toggleServices() {
         if(!service_dropdown.classList.contains("h-auto")) {
@@ -32,15 +38,24 @@
         }
     }
 
-    function carousel_left() {
+    function carouselLeft() {
         if(carousel_index !== 0) {
             carousel_index -= 1;
+
+            if (breakpoint.matches) {
+                carousel.storyblokEditable.transform = `translate(-${carousel_tranform_amount_mobile*carousel_index},0)`
+            }
+            carousel.storyblokEditable.transform = `translate(-${carousel_tranform_amount*carousel_index},0)`
         }
     }
 
-    function carousel_right() {
-        if(carousel_index < blok.gallery.length) {
+    function carouselRight() {
+        if(carousel_index < blok.gallery.length-1) {
             carousel_index += 1;
+            if (breakpoint.matches) {
+                carousel.storyblokEditable.transform = `translate(${carousel_tranform_amount_mobile*carousel_index},0)`
+            }
+            carousel.storyblokEditable.transform = `translate(${carousel_tranform_amount*carousel_index},0)`
         }
     }
 
@@ -77,23 +92,27 @@
     <div class="image-carousel--images flex flex-row pl-[10px] lg:pl-[40px] py-[40px] gap-8">
         {#if blok.gallery.length>0 }
         {#each blok.gallery as image, i}
-            <div class="rounded-[20px] overflow-hidden basis-[250px] lg:basis-[547px] shrink-0 h-auto hover:cursor-pointer">
+            <div class="rounded-[20px] overflow-hidden basis-[250px] lg:basis-[547px] shrink-0 h-auto hover:cursor-pointer" role="button" tabindex=0 on:keydown={(event) => { event.key === "Enter" ? toggleGalleryModal(image.filename) : null }} on:click={() => { toggleGalleryModal(image.filename) }}>
                 <img class="object-cover w-full h-full" src={image.filename} alt={`${blok.title} - gallery image - ${i}`}/>
             </div>
         {/each}
         {/if}
     </div>
     <div class="carousel-controls absolute bottom-[50%] [transform:translate(0,50%)] flex flex-row items-center w-[100vw] px-[15px] lg:px-[55px]">
-        <div class="left-arrow w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:cursor-pointer">
+        <button class="left-arrow w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:cursor-pointer" on:click={carouselLeft}>
             <img src="/assets/arrow-left.svg" alt="left arrow" />
-        </div>
-        <div class="right-arrow ml-auto w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:cursor-pointer">
+        </button>
+        <button class="right-arrow ml-auto w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:cursor-pointer" on:click={carouselRight}>
             <img src="/assets/arrow-right.svg" alt="right arrow" />
-        </div>
+        </button>
     </div>
 </div>
 
-<div class="gallery-modal absolute hidden w-[100vw] h-[100vw]" bind:this={modal}>
-    <div class="modal-mask w-full h-full" on:click={toggleGalleryModal()}></div>
+<div class="gallery-modal fixed top-[60px] lg:top-[100px] hidden w-[100vw] h-[calc(100vh-60px)] lg:h-[calc(100vh-100px)]" bind:this={modal}>
+    <button class="modal-mask w-full h-full" on:click={toggleGalleryModal}>
+        <button class="w-[20px] h-[20px] lg:w-[40px] lg:h-[40px]">
+            <img class="w-full h-full" src="/assets/close-button.svg" alt="close modal mask">
+        </button>
+    </button>
     <div class="image-wrapper" bind:this={modal_image}></div>
 </div>

@@ -23,6 +23,9 @@
 <!--Mobile Navigation-->
 
 <div class="mobile-nav flex flex-row lg:hidden fixed top-0 w-full z-10 h-[60px] bg-[#11743b] text-zinc-100">
+    <div class="logo-wrapper absolute left-[20px] flex flex-row h-full w-[100px] items-center">
+        <img src="/assets/logo-mobile.png" alt="Environmental Concepts logo"/>
+    </div>
     <button class="menu-button absolute right-[20px] hover:cursor-pointer z-20" on:click={toggleDrawer}>
         <div class="w-[20px] h-[60px] flex flex-row justify-center items-center">
             <div class="hamburger-icon w-[20px] h-[14px] {drawerOpen?"hidden":""}">
@@ -38,7 +41,7 @@
         <a href="/about" class="uppercase w-full py-[20px] text-right hover:bg-[#0b4a25] pr-5" on:click={toggleDrawer}>About</a>
         <a href="/services" class="uppercase w-full py-[20px] text-right hover:bg-[#0b4a25] pr-5" on:click={toggleDrawer}>Services</a>
         <a href="/contact" class="uppercase w-full py-[20px] text-right hover:bg-[#0b4a25] pr-5" on:click={toggleDrawer}>Contact Us</a>
-        <div class="self-end justify-self-end px-5 w-full h-auto">
+        <div class="self-end justify-self-end px-10 w-full h-auto">
             <img class="w-full h-full object-contain" src="/assets/logo.png" />
         </div>
     </div>

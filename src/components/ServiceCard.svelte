@@ -20,7 +20,7 @@
         {description ? description : ''}
     </div>
     <div class="flex flex-row w-full items-center mt-[30px] gap-3">
-        <a class="2xl:text-lg [-webkit-text-stroke-width:1px]" href="/{_button ? _button.url.cached_url : ''}">{_button ? _button.text : ''}</a>
+        <a class="2xl:text-lg text-sm [-webkit-text-stroke-width:1px]" href="/{_button ? _button.url.cached_url : ''}">{_button ? _button.text : ''}</a>
         <img width=25 height=16 src="/assets/button-arrow-black.svg" alt="" />
     </div>
 </div>
