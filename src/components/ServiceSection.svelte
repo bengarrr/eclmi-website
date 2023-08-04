@@ -80,7 +80,7 @@
             </div>
         </div>
         <div class="basis-full lg:basis-1/2">
-            <div class="2xl:w-[902px] lg:w-[700px] w-full h-auto lg:ml-auto hidden lg:block">
+            <div class="2xl:w-[902px] lg:w-[700px] w-full h-auto aspect-video lg:ml-auto hidden lg:block">
                 {#if blok.lead_image}
                     <img class="w-full h-full object-cover" src={blok.lead_image.filename} alt={`${blok.title} - heading image`}/>
                 {/if}
