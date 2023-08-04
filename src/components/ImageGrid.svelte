@@ -8,7 +8,7 @@
     {#if blok.images.length>0}
     {#each blok.images as image}
         <div class="image">
-            <img class="h-auto w-[250px]" src="{image.filename}" alt={image.description} />
+            <img class="h-auto w-[100px] lg:w-[250px]" src="{image.filename}" alt={image.description} />
         </div>
     {/each}
     {/if}

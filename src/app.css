@@ -7,7 +7,7 @@ html * {
 }
 
 .button-primary {
-    @apply w-[200px] h-[75px] bg-[#0d743b] rounded-[10px] flex flex-row items-center justify-between px-[18px] text-zinc-100;
+    @apply w-[150px] lg:w-[200px] h-[50px] lg:h-[75px] bg-[#0d743b] rounded-[5px] lg:rounded-[10px] flex flex-row items-center justify-between px-[18px] text-zinc-100 hover:bg-[#0b4a25];
 }
 
 .button-primary>img {
@@ -15,7 +15,7 @@ html * {
 }
 
 .button-secondary {
-    @apply w-[200px] h-[75px] border-[4px] border-[#0d743b] rounded-[10px] flex flex-row items-center justify-center;
+    @apply w-[150px] lg:w-[200px] h-[50px] lg:h-[75px] border-[4px] border-[#0d743b] rounded-[5px] lg:rounded-[10px] flex flex-row items-center justify-center hover:bg-[#0b4a2580];
 }
 
 .paragraph > p:empty {
