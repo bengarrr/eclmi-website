@@ -14,7 +14,6 @@
     function transition(timeout) {
         const prev = index;
         index = (index + 1) % images.length;
-        console.log(_images.children[prev])
         _images.children[prev].classList.remove("hero-current")
         _images.children[prev].classList.add("hidden");
         _images.children[index].classList.add("hero-current");

@@ -10,7 +10,7 @@
 
 <div
     use:storyblokEditable={blok}
-    class="paragraph"
+    class="paragraph mb-[40px]"
 >
     {@html paragraph}
     <!-- {#if blok }
