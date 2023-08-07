@@ -10,7 +10,7 @@
 
 </script>
 
-<div class="flex flex-row {_position} absolute text-zinc-100">
+<div class="absolute {_position} z-[2] flex flex-row  text-zinc-100">
     <div class="flex flex-col w-full max-w-[500px] lg:max-w-[770px] 2xl:max-w-[850px]">
         <div class="tag-text 2xl:text-7xl lg:text-6xl md:text-4xl text-3xl lg:[-webkit-text-stroke-width:3px] [-webkit-text-stroke-width:2px]">
             {tag}

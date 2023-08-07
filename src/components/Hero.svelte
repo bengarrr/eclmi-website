@@ -34,7 +34,8 @@
     })
 </script>
 
-<div class="hero-wrapper">
+<div class="hero-wrapper relative">
+    <div class="absolute top-0 left-0 w-[100vw] h-[calc(100vh-100px)] bg-black opacity-20 z-[1]"></div>
     <div class="hero-images relative" bind:this={_images}>
         {#if images.length>0}
         {#each images as { filename, alt }, i }

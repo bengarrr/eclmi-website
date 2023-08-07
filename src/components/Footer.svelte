@@ -3,7 +3,7 @@
 </script>
 
 <div class="footer-wrapper relative">
-    <img class="min-h-[100px] w-auto object-cover" src='/assets/footer_background.png' alt="footer background"/>
+    <img class="min-h-[100px] w-full object-cover" src='/assets/footer_background.png' alt="footer background"/>
     <div class="footer flex flex-row items-end lg:items-center absolute bottom-0 mb-[10px] lg:mb-[10px] w-full pl-[10px] lg:pl-[36px] pr-[10px] xl:pr-[50px] 2xl:pr-[195px]">
         <div class="logo-wrapper w-[150px] h-auto lg:w-fit">
             <img src="/assets/logo.png" class="w-full h-full object-contain" alt=""/>

@@ -15,7 +15,7 @@
             {blok.title ? blok.title : ''}
         </h2>
     </div>
-    <div class="cards flex flex-row flex-wrap xl:flex-nowrap justify-center xl:justify-around gap-[10px] xl:gap-3 2xl:gap-6 px-[10px] xl:px-[23px] 2xl:px-0">
+    <div class="cards flex flex-row flex-wrap xl:flex-nowrap justify-center gap-[10px] xl:gap-3 2xl:gap-6 px-[10px] xl:px-[23px] 2xl:px-0">
         {#if blok.cards.length>0}
         {#each blok.cards as card}
             {#if card.image }
