@@ -25,3 +25,11 @@ html * {
 .paragraph a {
     @apply text-blue-500 underline hover:text-blue-800
 }
+
+.hero-image {
+    transform: translate(100%,0);
+}
+
+.hero-current {
+    transform: translate(0,0);
+}
