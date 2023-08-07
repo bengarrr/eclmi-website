@@ -13,8 +13,6 @@ export async function load({ params, parent }) {
         version: 'draft'
     });
 
-    console.log(dataStory);
-
     return {
         story: dataStory.data.story
     };

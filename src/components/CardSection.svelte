@@ -4,8 +4,6 @@
     import ServiceCard from "./ServiceCard.svelte";
 
     export let blok;
-
-    console.log(blok)
 </script>
 
 <div

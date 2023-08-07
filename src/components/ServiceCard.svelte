@@ -3,8 +3,6 @@
     export let title;
     export let description;
     export let _button;
-
-    console.log(_button)
 </script>
 
 <div class="service-card flex flex-col items-center w-full lg:w-1/2 xl:w-1/4 max-w-[437px] pt-[25px] pb-[90px] px-[30px] border-[#9db599] border-[4px] rounded-[20px]">

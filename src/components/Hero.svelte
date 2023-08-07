@@ -29,7 +29,7 @@
 
     onMount(() => {
         if(images.length > 1) {
-            setTimeout(transition, 6000, 5200+[transitionTime]);
+            setTimeout(transition, 6000, 5200+transitionTime);
         }
     })
 </script>
@@ -39,7 +39,7 @@
         {#if images.length>0}
         {#each images as { filename, alt }, i }
             {#if i === 0}
-                <div class="hero-image hero-current transition-all duration-[{transitionTime}ms] ease-in-out w-[100vw] h-[calc(100vh-100px)]">
+                <div class="hero-image hero-current transition-all duration-1000 ease-in-out w-[100vw] h-[calc(100vh-100px)]">
                     <img
                         class="w-full h-full object-cover" 
                         src="{filename}" 
@@ -47,7 +47,7 @@
                     />
                 </div>
             {:else}
-                <div class="hero-image hidden transition-all duration-[{transitionTime}ms] ease-in-out w-[100vw] h-[calc(100vh-100px)]">
+                <div class="hero-image hidden transition-all duration-1000 ease-in-out w-[100vw] h-[calc(100vh-100px)]">
                     <img
                         class="w-full h-full object-cover"  
                         src="{filename}"

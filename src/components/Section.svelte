@@ -14,9 +14,6 @@
     //     blok.title_color.includes('#') ? `text-[${blok.title_color}]` : `text-[#${blok.title_color}]`
     //     :
     //     'text-black';
-
-    console.log(blok)
-
 </script>
 
 <div

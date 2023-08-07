@@ -2,8 +2,6 @@
     import { storyblokEditable, StoryblokComponent } from "@storyblok/svelte";
 
     export let blok;
-
-    console.log(blok)
 </script>
 
 <div class="contact-form mb-[100px] lg:mb-[165px] px-[10px]">
