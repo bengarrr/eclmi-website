@@ -113,7 +113,13 @@
         <div class="basis-full lg:basis-1/2">
             <div class="2xl:w-[902px] lg:w-[700px] w-full h-auto aspect-video lg:ml-auto hidden lg:block">
                 {#if blok.lead_image}
-                    <img class="w-full h-full object-cover" src={blok.lead_image.filename} alt={`${blok.title} - heading image`}/>
+                    <img class="w-full h-full object-cover" 
+                        src="{blok.lead_image.filename}/m/320x0/filters:quality(75)"
+                        srcset="{blok.lead_image.filename}/m/320x0/filters:quality(100) 320w
+                                {blok.lead_image.filename}/m/768x0/filters:quality(100) 699w"
+                        size="100vw" 
+                        alt={`${blok.title} - heading image`}
+                    />
                 {/if}
             </div>
         </div>
@@ -123,8 +129,16 @@
     <div class="image-carousel--images flex flex-row pl-[10px] lg:pl-[40px] py-[40px] gap-8 transition-all duration-700 ease-in-out" bind:this={carousel}>
         {#if blok.gallery.length>0 }
         {#each blok.gallery as image, i}
-            <div class="rounded-[20px] overflow-hidden basis-[250px] lg:basis-[547px] shrink-0 h-auto hover:cursor-pointer" role="button" tabindex=0 on:keydown={(event) => { event.key === "Enter" ? toggleGalleryModal(image.filename) : null }} on:click={() => { toggleGalleryModal(image.filename) }}>
-                <img class="object-cover w-full h-full" src={image.filename} alt={`${blok.title} - gallery image - ${i}`}/>
+            <div class="rounded-[20px] overflow-hidden basis-[250px] lg:basis-[547px] shrink-0 h-auto hover:cursor-pointer" role="button" tabindex=0 on:keydown={(event) => { event.key === "Enter" ? toggleGalleryModal(`${image.filename}/m/`) : null }} on:click={() => { toggleGalleryModal(`${image.filename}/m/`) }}>
+                <img class="object-cover w-full h-full" 
+                    src="{image.filename}/m/320x0/filters:quality(75)"
+                    srcset="{image.filename}/m/320x0/filters:quality(100) 320w
+                            {image.filename}/m/768x0/filters:quality(100) 768w
+                            {image.filename}/m/1280x0/filters:quality(100) 1280w
+                            {image.filename}/m/ 1536w"
+                    sizes="100vw" 
+                    alt={`${blok.title} - gallery image - ${i}`}
+                />
             </div>
         {/each}
         {/if}

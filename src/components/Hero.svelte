@@ -39,10 +39,10 @@
                     <img
                         class="w-full h-full object-cover"
                         src="{filename}/m/320x0/filters:quality(75)" 
-                        srcset="{filename}/m/320x0/filters:quality(75) 320px,
-                                {filename}/m/768x0/filters:quality(100) 768px,
-                                {filename}/m/1280x0/filters:quality(100) 1280px,
-                                {filename}/m/ 1536px"
+                        srcset="{filename}/m/320x0/filters:quality(100) 320w,
+                                {filename}/m/768x0/filters:quality(100) 768w,
+                                {filename}/m/1280x0/filters:quality(100) 1280w,
+                                {filename}/m/ 1536w"
                         sizes="100vw" 
                         alt="{alt}"
                     />
@@ -52,10 +52,10 @@
                     <img
                         class="w-full h-full object-cover"  
                         src="{filename}/m/320x0/filters:quality(75)" 
-                        srcset="{filename}/m/320x0/filters:quality(75) 320px,
-                                {filename}/m/768x0/filters:quality(100) 768px,
-                                {filename}/m/1280x0/filters:quality(100) 1280px,
-                                {filename}/m/ 1536px"
+                        srcset="{filename}/m/320x0/filters:quality(100) 320w,
+                                {filename}/m/768x0/filters:quality(100) 768w,
+                                {filename}/m/1280x0/filters:quality(100) 1280w,
+                                {filename}/m/ 1536w"
                         sizes="100vw"
                         alt="{alt}"
                     />
