@@ -4,11 +4,6 @@
 
     let _images;
 
-    const sizes = {
-        width: 1920,
-        height: 1080
-    }
-
     const transitionTime = 1000;
 
     let index = 0;
@@ -34,7 +29,7 @@
     })
 </script>
 
-<div class="hero-wrapper relative">
+<div class="hero-wrapper relative overflow-x-hidden">
     <div class="absolute top-0 left-0 w-[100vw] h-[calc(100vh-100px)] bg-black opacity-20 z-[1]"></div>
     <div class="hero-images relative" bind:this={_images}>
         {#if images.length>0}
@@ -42,8 +37,13 @@
             {#if i === 0}
                 <div class="hero-image hero-current transition-all duration-1000 ease-in-out w-[100vw] h-[calc(100vh-100px)]">
                     <img
-                        class="w-full h-full object-cover" 
-                        src="{filename}" 
+                        class="w-full h-full object-cover"
+                        src="{filename}/m/320x0/filters:quality(75)" 
+                        srcset="{filename}/m/320x0/filters:quality(75) 320px,
+                                {filename}/m/768x0/filters:quality(100) 768px,
+                                {filename}/m/1280x0/filters:quality(100) 1280px,
+                                {filename}/m/ 1536px"
+                        sizes="100vw" 
                         alt="{alt}"
                     />
                 </div>
@@ -51,7 +51,12 @@
                 <div class="hero-image hidden transition-all duration-1000 ease-in-out w-[100vw] h-[calc(100vh-100px)]">
                     <img
                         class="w-full h-full object-cover"  
-                        src="{filename}"
+                        src="{filename}/m/320x0/filters:quality(75)" 
+                        srcset="{filename}/m/320x0/filters:quality(75) 320px,
+                                {filename}/m/768x0/filters:quality(100) 768px,
+                                {filename}/m/1280x0/filters:quality(100) 1280px,
+                                {filename}/m/ 1536px"
+                        sizes="100vw"
                         alt="{alt}"
                     />
                 </div>

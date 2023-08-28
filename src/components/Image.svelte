@@ -2,10 +2,17 @@
     import { storyblokEditable } from "@storyblok/svelte";
 
     export let blok;
+
+    export let wrapperClasses;
+    export let imgClasses;
+
+    const srcset = `
+        
+    `
 </script>
 
-<div class="image">
+<div class="image-wrapper {wrapperClasses}">
     {#if blok.image}
-        <img src={blok.image.filename} alt={blok.image.description} />
+        <img src={blok.image.filename} class={imgClasses} alt={blok.image.description} />
     {/if}
 </div>
