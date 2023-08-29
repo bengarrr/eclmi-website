@@ -38,10 +38,9 @@
                 <div class="hero-image hero-current transition-all duration-1000 ease-in-out w-[100vw] h-[calc(100vh-100px)]">
                     <img
                         class="w-full h-full object-cover"
-                        src="{filename}/m/320x0/filters:quality(75)" 
-                        srcset="{filename}/m/320x0/filters:quality(100) 320w,
-                                {filename}/m/768x0/filters:quality(100) 768w,
-                                {filename}/m/1280x0/filters:quality(100) 1280w,
+                        src="{filename}/m/320x0/" 
+                        srcset="{filename}/m/768x0 768w,
+                                {filename}/m/1280x0/ 1280w,
                                 {filename}/m/ 1536w"
                         sizes="100vw" 
                         alt="{alt}"
@@ -51,10 +50,9 @@
                 <div class="hero-image hidden transition-all duration-1000 ease-in-out w-[100vw] h-[calc(100vh-100px)]">
                     <img
                         class="w-full h-full object-cover"  
-                        src="{filename}/m/320x0/filters:quality(75)" 
-                        srcset="{filename}/m/320x0/filters:quality(100) 320w,
-                                {filename}/m/768x0/filters:quality(100) 768w,
-                                {filename}/m/1280x0/filters:quality(100) 1280w,
+                        src="{filename}/m/320x0/" 
+                        srcset="{filename}/m/768x0 768w
+                                {filename}/m/1280x0/ 1280w,
                                 {filename}/m/ 1536w"
                         sizes="100vw"
                         alt="{alt}"
